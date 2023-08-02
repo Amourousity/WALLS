@@ -108,6 +108,10 @@ local path = game:GetService("PathfindingService"):CreatePath({
 	WaypointSpacing = math.huge,
 })
 local startPosition = character:GetPivot().Position
+pcall(
+	queueonteleport or queue_on_teleport,
+	"loadstring(game:HttpGet('https://raw.githubusercontent.com/Amourousity/WALLS/main/source.lua'), 'WALLS')()"
+)
 while workspace.DistributedGameTime < 30 do
 	slideTo(startPosition)
 end
